@@ -1,0 +1,370 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fredoka:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor01: #F2E6DF;
+    --cor02: #BF0B1A;
+    --cor03: #D90B0B;
+    --cor11: #fc17179f;
+    --cor04: #F24C27;
+    --cor05: #7AA61C;
+    --cor06: #315914;
+    --cor07: #0D0D0D;
+    --cor08: #d90b0b6b;
+    --cor09: #7aa61c80;
+    --cor10: #7aa61c3b;
+
+    --fontelogo: 'Amatic SC', sans-serif;
+    --fontestart: 'Fredoka', sans-serif;
+    --fontetexto: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;        
+    background-color: var(--cor01);
+    color: var(--cor07);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--cor03);
+}
+
+header h1 {    
+    font-family: var(--fontelogo);
+    color: var(--cor01);
+    
+}
+
+.icones {
+    color: var(--cor01);
+}
+
+.temporizador {
+    background-color: var(--cor09);    
+    color: var(--cor01);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.categorias {
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;      
+    box-shadow: 0 5px 15px -10px var(--cor09);          
+}
+
+.categoria-bttn {    
+    font-family: var(--fontestart);
+    color: var(--cor01);       
+    text-decoration: none;
+    border: 0;    
+    background-color: transparent;   
+}
+
+.categoria-bttn.selecionada { 
+    font-weight: 500; 
+    background-color: var(--cor10);
+}
+
+.timer-box {
+    text-align: center;
+}
+
+#timer-display {
+    font-size: 100px;  
+    margin: 10px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+}
+
+#iniciar-bttn, #proximo-bttn {           
+    color: var(--cor01);    
+    border: 0;
+    border-radius: 5px;    
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+#iniciar-bttn {     
+    font-weight: 500;    
+    box-shadow: 0 4px 8px var(--cor09);         
+}
+
+#iniciar-bttn p {
+    font-family: var(--fontestart); 
+    font-size: 30px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.tarefas {
+    width: 100%;    
+}
+
+.menu-tarefas {
+    display: flex;
+    justify-content: space-between;  
+    width: 100%;
+    color: var(--cor02);
+}
+
+.menu-tarefas h3 {
+    font-family: var(--fontestart);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    padding: 10px 19px;
+}
+
+.menu-tarefas i {
+    font-size: 20px;
+    right: 0;
+    margin: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+#menu-escondido {
+    display: none;
+}
+
+.lista-tarefas {
+    width: 100%;
+    margin: 0;
+}
+
+#lista {
+    list-style: none;
+    margin: auto;
+}
+
+#lista li {
+    display: flex;    
+    justify-content: space-between;
+    align-items: left;    
+}
+
+#lista input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px 0 2px 5px;    
+    font-size: 16px;
+    color: var(--cor06);
+    border-bottom: 1px solid var(--cor02);
+}
+
+#lista input[type="checkbox"] {
+    appearance: none;  /* Remove a aparência padrão do sistema */
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 0 10px;
+    border: 2px solid var(--cor02);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+#lista input[type="checkbox"]:checked::after {
+    content: "\f00c"; /* Código do ícone de marcação no FontAwesome */
+    font-family: FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: var(--cor02);
+}
+
+.adiciona-tarefa {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--cor01);
+}
+
+.adiciona-tarefa label {
+    display: none;
+}
+
+#input-tarefa {
+    flex-grow: 1;
+    color: var(--cor06);
+    font-size: 16px;
+    height: 30px;
+    margin: 20px 5px 20px 20px;
+    border-radius: 5px;
+    border: 2px dashed var(--cor02);
+    background-color: var(--cor01);
+}
+
+#input-tarefa:active {
+    background-color: var(--cor09);
+}
+
+.adiciona-tarefa ::placeholder {
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    color: var(--cor02);
+}
+
+#adicionar-button {
+    font-size: 25px;
+    padding: 10px 15px 10px 10px;
+    color: var(--cor02);
+    border: 0;
+    background-color: var(--cor01);
+}
+
+footer {    
+    color: var(--cor06);
+    text-align: center;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor06);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+header h1 {
+    font-size: 32px;
+    margin: 20px;
+}
+
+.icones {
+    color: var(--cor01);
+    font-size: 20px;
+    padding: 30px;
+}
+
+.temporizador {    
+    margin: 10px;
+}
+
+.categoria-bttn { 
+    font-size: 21px;
+    padding: 20px 7px;
+}
+
+#timer-display {  
+    margin: 10px;
+}
+
+.botoes {
+    margin: 20px 0;
+}
+
+#iniciar-bttn, #proximo-bttn {
+    font-size: 25px;
+    padding: 10px 20px; 
+}
+
+.menu-tarefas h3 {    
+    font-size: 20px;
+    padding: 10px 19px;
+}
+
+.menu-tarefas i {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+#lista {
+    padding-inline-start: 10px;
+    margin: 10px;
+}
+
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 40px;
+        margin: 10px;
+        padding-left: 50px;
+    }
+    
+    .icones {
+        color: var(--cor01);
+        font-size: 25px;
+        padding: 25px 50px;
+    }
+
+    .temporizador {        
+        margin: 20px 450px;
+        height: auto;
+    }
+
+    .categoria-bttn { 
+        font-size: 25px;
+        padding: 15px 35px;        
+    }
+
+    #timer-display {  
+        margin: 20px;
+    }
+
+    .botoes {
+        margin-bottom: 20px;
+    }
+
+    #iniciar-bttn, #proximo-bttn {
+        font-size: 25px;
+        padding: 10px 20px; 
+    }
+
+    #iniciar-bttn i {
+        font-size: 30px;
+    }
+
+    .menu-tarefas h3 {
+        font-size: 25px;
+        padding-left: 450px;
+    }
+    
+    .menu-tarefas i {
+        font-size: 25px;
+        padding-right: 450px;
+    }
+
+    #lista {
+        padding-inline-start: 450px;
+        padding-right: 445px;
+    }
+
+    .adiciona-tarefa {
+        width: auto;
+        margin-left: 450px;
+    }
+
+    #input-tarefa {
+        height: 40px;
+        margin: 20px 5px 20px 0;
+        
+    }
+
+    #adicionar-button {
+        font-size: 30px;
+        padding: 10px 5px;
+        margin-right: 440px;
+    }

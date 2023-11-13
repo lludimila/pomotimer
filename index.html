@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoTimer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/pomodoro-image.png" type="image/x-icon">
+    <audio id="alarme-som" src="sons/mixkit-alarm-digital-clock-beep-989.wav"></audio>
+    <script src="https://kit.fontawesome.com/6ca9fbaa86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>PomoTimer</h1>        
+        <div class="icones">
+        <i class="fas fa-user"></i>                       
+        </div>             
+    </header>
+    <main>
+        <section class="temporizador">
+            <div class="categorias">
+                <a href="#" id="pomodoro" class="categoria-bttn selecionada">Pomodoro</a>
+                <a href="#" id="short-bttn" class="categoria-bttn">Pausa Curta</a>
+                <a href="#" id="long-bttn" class="categoria-bttn">Pausa Longa</a>
+            </div>
+            <div class="feedback">
+
+            </div>
+            <div class="timer-box">
+                <h2 id="timer-display">25:00</h2>                
+            </div>
+            <div class="botoes">
+                <button id="iniciar-bttn"><p>iniciar</p><i class="fas fa-play"></i></button>
+                <button id="proximo-bttn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section> 
+        
+        <section class="tarefas">            
+            <div class="menu-tarefas">
+                <h3>Tarefas</h3>
+                <i class="fas fa-ellipsis-v"></i></div>                      
+                    <ul id="menu-escondido">
+                        <li>Excluir tarefas conclúidas</li>
+                        <li>exemplo</li>
+                        <li>exemplo</li>
+                        <li>exemplo</li>
+                        <li>exemplo</li>
+                    </ul> 
+                    <div class="lista-tarefas">
+                        <ul id="lista"></ul>           
+                    </div>  
+                    <div class="adiciona-tarefa">
+                        <label for="input-tarefa">Adicione uma tarefa</label>
+                        <input id="input-tarefa" type="text" placeholder="Adicione uma tarefa">
+                        <button id="adicionar-button" onclick="adicionarTarefa()">+</button>
+                    </div>         
+        </section> 
+             
+    </main>
+    <footer>    
+        <p>&copy; 2023 PomoTimer. Todos os direitos reservados. Design e desenvolvimento por <a href="https://seusite.com">Lele</a> (◕‿◕)
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
